@@ -1,0 +1,124 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    padding: 1rem 3.5rem;
+    z-index: 100;
+    height: 7rem;
+    box-shadow: $box-shadow;
+    position: fixed;
+    left: 26rem;
+    right: 0;
+    &__search{
+
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 2rem;
+        i{
+           cursor: pointer;
+            font-size: 2rem;
+            margin-right: 2rem
+            
+        }
+        input{
+            outline: none;
+            font-size: 1.4rem;
+            border: none;
+            color: #808b98;
+            font-family: 'Poppins', sans-serif;
+            &::placeholder{
+                font-weight: 500;
+                color: #c5d1e8;
+            }
+        }
+
+    }
+
+    &__right{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &__item{
+            cursor: pointer;
+            font-size: 2.2rem;
+            margin-right: 3rem;
+            position: relative;
+            &__quantity{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                font-size: 1rem;
+                min-height: 1.6rem;
+                color: $txt-white;
+                border-radius: 50%;
+                min-width: 1.6rem;
+                background-color: red;
+                top: 0;
+                right: -.8rem;
+            }
+        }
+
+        &__profile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            // width: 18rem;
+
+            &__logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                background-color: #9d72ff;
+                margin-right: 1rem;
+                i{
+                    color: #ffff;
+                }
+            }
+        }
+        &__auth{
+        position: absolute;
+        top: 140%;           
+        width: 19rem;
+        right: 0;
+        background-color: #ffff;
+        box-shadow: $box-shadow;
+        border-radius: .4rem;
+        border:.1rem solid #dddddd ;
+        display: none;
+        &.active{
+            display: block;
+        }
+        a{
+            
+            border-bottom: .1rem solid #dddddd;
+        }
+       
+        &__item{
+            padding: .8rem 3rem;
+            font-size: 1.4rem;
+            font-family: 'Poppins', sans-serif;
+            border-bottom: .1rem solid #dddddd;
+
+            i{
+                margin-right: 2rem;
+            }
+            &:hover{
+                background-color: #f8f8f8;
+                color: #9d72ff;
+            }
+        }
+        }
+    }
+}

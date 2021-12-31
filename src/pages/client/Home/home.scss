@@ -1,0 +1,10 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.home{
+    min-height: 100vh;
+    border: .2rem solid $border-color;
+    &__content{
+        padding: 2rem;
+    }
+}

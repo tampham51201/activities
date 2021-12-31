@@ -1,0 +1,93 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.header{
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    &__banner{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__navbar{
+
+        @include flex(center,flex-start);
+        height: 6rem;
+        background: linear-gradient(to right bottom ,#5d0183,  #c606b7);
+        color: $second-bg;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0;
+        // @include tablet{
+        //     flex-direction: column;
+        //     align-items:flex-start;
+        //     font-size: 1.2rem;
+        //     position:absolute;
+        // }
+    
+
+        &__item{
+         
+            position: relative;
+            padding: 0 4rem;
+            height: 100%;
+            z-index: 1;
+            @include flex(center,center);
+            cursor: pointer;
+            &>a:hover{
+                color: $txt-white;
+            }
+            span{
+                margin-left: .5rem ;
+            }
+       
+            &:not(:last-child)
+            {
+                border-right: .2rem solid white;
+            }
+            &:hover{
+                background-color:#5b99ea ;
+                transition: .2s ease-in;
+                .header__navbar__item__list{
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                    transition: .3s ease-in;
+                }
+            }
+            
+        
+            
+             &__list{
+                 width: max-content;
+                 min-width: calc(100% + .2rem);
+                 left: 0;
+                 color: #333333;
+                 position: absolute;
+                 z-index: 1;
+                 top: 60%;
+                 background: white;
+                 opacity: 0;
+                
+                 visibility: hidden;
+                
+                 border:.1rem solid $border-color;
+                 box-shadow: $box-shadow;
+                 &__item{
+                    padding: 1rem  2rem;
+                    color: #333333;
+                    &:hover{
+                        background-color:#5b99ea ;
+                        color: $txt-white ;
+                        a{
+                            color: $txt-white;
+                        }
+                    }
+                 }
+             }
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+
+.footer{
+    background: linear-gradient(to right bottom ,#5d0183,  #c606b7);
+    color: white;
+    padding: 3rem  5rem;
+  
+    &__item{
+        font-size: 1.4rem;
+      span{
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: .5rem;
+      
+       
+      }
+    }
+}

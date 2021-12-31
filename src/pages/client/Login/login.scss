@@ -1,0 +1,43 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.login{
+  background: linear-gradient(to right bottom, rgb(131, 181, 223),rgb(44, 102, 228));
+  min-height: 100vh;
+  padding-top: 10rem;
+
+  &__logo{
+    text-align: center;
+    height: 14rem;
+    img{
+      height: 14rem;
+    }
+  
+    
+  }
+  h1{
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+  }
+  
+
+}
+.login-form {
+    max-width: 50rem;
+    margin:   0 auto ;
+    box-shadow: $box-shadow;
+    padding: 3rem;
+    background: white;
+    
+    
+  }
+  .login-form-forgot {
+    float: right;
+  }
+  .ant-col-rtl .login-form-forgot {
+    float: left;
+  }
+  .login-form-button {
+    width: 100%;
+  }

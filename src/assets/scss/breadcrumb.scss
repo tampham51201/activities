@@ -1,0 +1,67 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.ant-breadcrumb
+{
+    &>span{
+        height: 100%;
+        @include flex(center,flex-start);
+        padding: 0rem 2rem 0rem 3rem;
+        background:#fafbfd;
+        position: relative;
+        // margin-left: -.2rem;
+        cursor: pointer;
+        &:hover{
+            background-color: #002878;
+            color: white !important;
+            a{
+                color: white !important;
+            }
+         
+            &::after{
+                background-color: #002878;
+                
+            }
+        }
+         
+    
+        &::after{
+            position: absolute;
+            content: "";  
+            
+            background:#fafbfd;
+            right:-1.9rem;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-top: .2rem solid $border-color;
+            border-right: .2rem solid $border-color;
+            transform: rotate(45deg);
+       
+            // // border-width: 2.3rem;
+            // // border-color: transparent transparent transparent $border-color;
+            // tr
+            // border-style: solid;
+           
+        }
+    }
+    height: 5rem;
+    border-bottom: .2rem solid $border-color;
+    @include flex(center,flex-start);
+    font-size: 1.4rem;
+     text-transform: uppercase;
+     font-weight: 400;
+     .anticon{
+        font-size: 1.8rem  !important;
+    }
+   
+  
+}
+.ant-breadcrumb-link{
+    padding: 0 1rem;
+   
+}
+.ant-breadcrumb > span:last-child a {
+    color: #333333; 
+   
+}
+
+
